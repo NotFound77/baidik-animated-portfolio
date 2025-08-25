@@ -99,8 +99,8 @@ const ContactSection = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      details: "+91 98765 43210",
-      action: "tel:+919876543210"
+      details: "+91 91432 09913",
+      action: "tel:+919143209913"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
