@@ -93,8 +93,8 @@ const ContactSection = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: "baidik.das@example.com",
-      action: "mailto:baidik.das@example.com"
+      details: "baidik.das.kol@gmail.com",
+      action: "mailto:baidik.das.kol@gmail.com"
     },
     {
       icon: <Phone className="w-6 h-6" />,
