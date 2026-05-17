@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Baidik Das Portfolio Design System */
+
+@layer base {
+  :root {
+    /* Modern Portfolio Color Palette */
+    --background: 220 25% 6%;
+    --background-secondary: 220 20% 8%;
+    --background-tertiary: 220 15% 12%;
+    --foreground: 210 20% 96%;
+    --foreground-secondary: 210 15% 85%;
+    --foreground-muted: 210 10% 65%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 210 20% 96%;
+    --card-border: 220 15% 15%;
+
+    --primary: 217 91% 65%;
+    --primary-dark: 217 91% 55%;
+    --primary-light: 217 91% 75%;
+    --primary-foreground: 220 25% 6%;
+
+    --secondary: 280 65% 60%;
+    --secondary-dark: 280 65% 50%;
+    --secondary-light: 280 65% 70%;
+    --secondary-foreground: 220 25% 6%;
+
+    --accent: 45 93% 65%;
+    --accent-dark: 45 93% 55%;
+    --accent-light: 45 93% 75%;
+    --accent-foreground: 220 25% 6%;
+
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --error: 0 72% 51%;
+
+    --border: 220 15% 15%;
+    --input: 220 15% 12%;
+    --ring: 217 91% 65%;
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-secondary)) 50%, hsl(var(--background-tertiary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--background-tertiary)) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -8px hsl(var(--primary) / 0.3);
+    --shadow-medium: 0 8px 30px -12px hsl(var(--primary) / 0.4);
+    --shadow-strong: 0 20px 40px -16px hsl(var(--primary) / 0.5);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+
+    /* Transitions */
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Portfolio Hero Button */
+  .btn-hero {
+    @apply px-8 py-4 rounded-full font-medium tracking-wide;
+    @apply bg-gradient-to-r from-primary to-secondary;
+    @apply text-primary-foreground;
+    @apply shadow-[var(--shadow-soft)];
+    @apply transition-[var(--transition-smooth)];
+    @apply hover:shadow-[var(--shadow-medium)] hover:scale-105;
+    @apply active:scale-95;
+  }
+
+  /* Portfolio Card */
+  .portfolio-card {
+    @apply bg-card border border-card-border rounded-2xl p-6;
+    @apply backdrop-blur-sm;
+    @apply shadow-[var(--shadow-soft)];
+    @apply transition-[var(--transition-smooth)];
+    @apply hover:shadow-[var(--shadow-medium)] hover:-translate-y-2;
+  }
+
+  /* Skill Badge */
+  .skill-badge {
+    @apply inline-flex items-center px-4 py-2 rounded-full;
+    @apply bg-gradient-to-r from-primary/20 to-secondary/20;
+    @apply border border-primary/30;
+    @apply text-foreground font-medium;
+    @apply transition-[var(--transition-smooth)];
+    @apply hover:from-primary/30 hover:to-secondary/30;
+    @apply hover:border-primary/50 hover:scale-105;
+  }
+
+  /* Section Container */
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-20;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent;
+    @apply bg-clip-text text-transparent;
+  }
+
+  /* Glass Effect */
+  .glass-effect {
+    @apply backdrop-blur-md bg-card/80 border border-card-border/50;
+  }
+}
