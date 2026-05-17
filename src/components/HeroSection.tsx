@@ -144,7 +144,7 @@ const HeroSection = () => {
             >
               <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl opacity-30 animate-pulse-glow"></div>
               <img 
-                src="https://raw.githubusercontent.com/NotFound77/Images/refs/heads/main/f9da88a0-0197-41f0-8117-f53dac2aaf91.jpg?token=GHSAT0AAAAAAD4YTDMBCIKGFEVDS25FFBFC2QKEB4A" 
+                src="https://cdn.jsdelivr.net/gh/NotFound77/Images@main/f9da88a0-0197-41f0-8117-f53dac2aaf91.jpg" 
                 alt="Baidik Das - Software Developer" 
                 className="relative w-80 h-80 rounded-full object-cover object-[center_35%] border-4 border-card-border shadow-strong"
               />
